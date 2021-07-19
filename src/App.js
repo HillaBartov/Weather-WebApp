@@ -21,7 +21,7 @@ import sun from './media/sun.png';
 import rain from './media/rain.jpg';
 import clouds from './media/clouds.png';
 import night from './media/night.jpg';
-import day from './media/day.jpg';
+import dayImage from './media/day.jpg';
 import world from './media/world.jpg';
 import earth from './media/earth.png';
 import extreme from './media/extreme-weather.png';
@@ -151,7 +151,6 @@ function App() {
   const day = today.getDate()
   const motheYear = '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
   const [days, setDays] = React.useState([day + motheYear,(day+1) + motheYear,(day+2) + motheYear ]);
-  
   const time =  today.getHours();
   
   const handleSearch = () => {
@@ -189,7 +188,7 @@ function App() {
       <Card className={classes.card}>
         <CardMedia
           className={classes.media}
-          image={state !== "Rain" ? (time > 19 || time < 6  ? night : day) : rain}
+          image={state !== "Rain" ? (time > 19 || time < 6  ? night : dayImage) : rain}
           title="Paella dish"
         >
         <CardContent>
